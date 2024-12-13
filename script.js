@@ -36,7 +36,7 @@ loginForm.addEventListener("submit", async (e) => {
         document.getElementById("login-section").style.display = "none";
         modeSection.style.display = "block";
     } else {
-        alert("Invalid roll or password. Please try again.");
+        alert("Invalid roll or password. Please try again .");
     }
 });
 
@@ -51,11 +51,28 @@ modeSection.addEventListener("click", (e) => {
 
 function setMode(mode) {
     const modeConfig = {
-        neutral: { bg: "1.jpg", music: "1.mp3", levels: ["a", "b", "c", "d", "e", "f", "g"] },
-        islamic: { bg: "2.jpg", music: "2.mp3", levels: ["aa", "bb", "cc", "dd", "ee", "ff", "gg"] },
-        bts: { bg: "3.jpg", music: "3.mp3", levels: ["p", "o", "i", "y", "t", "r", "e"] },
-        villain: { bg: "4.jpg", music: "4.mp3", levels: ["pp", "ii", "uu", "yy", "tt", "rr", "ee"] }
-    };
+    neutral: { 
+        bg: "1.jpg", 
+        music: "1.mp3", 
+        levels: ["Newton", "Tesla", "Curie", "Da Vinci", "Edison", "Einstein", "Socrates"] 
+    },
+    islamic: { 
+        bg: "2.jpg", 
+        music: "2.mp3", 
+        levels: ["Adam", "Khadija", "Suleiman", "Ayesha", "Ibn Sina", "Omar", "Muhammad"] 
+    },
+    bts: { 
+        bg: "3.jpg", 
+        music: "3.mp3", 
+        levels: ["Jin", "Yoongi", "Jimin", "Namjoon", "Taehyung", "Jungkook", "Bangtan"] 
+    },
+    villain: { 
+        bg: "4.jpg", 
+        music: "4.mp3", 
+        levels: ["Joker", "Voldemort", "Thanos", "Loki", "Moriarty", "Hannibal", "Darth Vader"] 
+    }
+};
+
 
     const { bg, music, levels } = modeConfig[mode];
 
@@ -98,7 +115,7 @@ function displayUserData(mode) {
         } else if (roll >= 4000 && roll <= 5999) {
             window.location.href = "https://youtube.com";
         } else if (roll >= 6000 && roll <= 7999) {
-            window.location.href = "https://sunnyleone.com";
+            window.location.href = "https://curator100.github.io/1811/";
         } else {
             alert("Invalid roll range. Please contact support.");
         }
